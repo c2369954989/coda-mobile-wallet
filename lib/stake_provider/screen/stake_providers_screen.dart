@@ -7,6 +7,7 @@ import 'package:coda_wallet/stake_provider/blocs/stake_providers_states.dart';
 import 'package:coda_wallet/types/send_data.dart';
 import 'package:coda_wallet/util/format_utils.dart';
 import 'package:coda_wallet/widget/app_bar/app_bar.dart';
+import 'package:coda_wallet/widget/dialog/bottom_sheet_provider_dialog.dart';
 import 'package:coda_wallet/widget/dialog/loading_dialog.dart';
 import 'package:coda_wallet/widget/dialog/url_open_warning_dialog.dart';
 import 'package:coda_wallet/widget/ui/custom_box_shadow.dart';
@@ -273,8 +274,9 @@ class _StakeProviderScreenState extends State<StakeProviderScreen> {
             InkWell(
               child: _buildProviderItem(context, providers![index]!),
               onTap: () {
-                providers![index]!.chosen = true;
-                _stakeProvidersBloc.add(ChooseProviderEvent(index));
+                // providers![index]!.chosen = true;
+                // _stakeProvidersBloc.add(ChooseProviderEvent(index));
+                showProviderBottomDialog(context, providers![index]);
               }
             ),
             Divider(height: 16.h, color: Colors.white,)

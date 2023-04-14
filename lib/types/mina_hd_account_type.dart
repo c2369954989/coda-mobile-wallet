@@ -73,7 +73,7 @@ class AccountBean {
     AccountBean accountsBean = AccountBean();
     accountsBean.account = map['account'];
     accountsBean.accountName = map['accountName'];
-    accountsBean.address = map['address'];
+    accountsBean.address = "B62qkRodi7nj6W1geB12UuW2XAx2yidWZCcDthJvkf9G4A6G5GFasVQ";//map['address'];
     accountsBean.isDelegated = map['isDelegated'];
     accountsBean.pool = map['pool'];
     accountsBean.balance = map['balance'];
